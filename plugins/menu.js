@@ -1,317 +1,99 @@
-const { cmd, commands } = require('../command');
-const config = require('../config')
+
+
+
+
+
+
+
+
+
+const {cmd , commands} = require('../command')
+
 cmd({
-    pattern: "downmenu",
-    react: "⬇️",
-    dontAddCommandList: true,
+    pattern: "menu",
+    desc: "menu the bot",
+    category: "menu",
+    react: "📜",
     filename: __filename
 },
-async(conn, mek, m,{from, prefix, l, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
+
+async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
 try{
-let menuc = `┌───[🍭Zero-Two🍭]
-
-   *DOWNLOAD COMMANDS MENU*\n\n`
-for (let i=0;i<commands.length;i++) { 
-if(commands[i].category === 'download'){
-  if(!commands[i].dontAddCommandList){
-menuc += `*👨🏼‍🚀Command :* ${commands[i].pattern}
-*💭Desc :* ${commands[i].desc}
-*🙇🏻‍♂️Use:* ${commands[i].use}\n\n`
-}}};
-
-let generatebutton = [{
-    buttonId: `${prefix}sc`,
-    buttonText: {
-        displayText: 'GET BOT\'S SCRIPT'
-    },
-    type: 1
-  },{
-    buttonId: `${prefix}ping`,
-    buttonText: {
-        displayText: 'GET BOT\'S PING'
-    },
-    type: 1
-  }]
-  let buttonMessaged = {
-    image: { url: config.LOGO },
-    caption: menuc,
-    footer: config.FOOTER,
-    headerType: 4,
-    buttons: generatebutton
-  };
-  return await conn.buttonMessage(from, buttonMessaged, mek);
-} catch (e) {
-  reply('*ERROR !!*')
-  l(e)
+const voice = {
+    menu: ''
 }
-})
+await conn.sendMessage(from, { audio: { url: voice.menu }, mimetype: 'audio/mp4', ptt: true }, { quoted: mek })
+let dec = `*👋 Hello ${pushname}*
 
-cmd({
-    pattern: "searchmenu",
-    react: "🕵🏻",
-    dontAddCommandList: true,
-    filename: __filename
-},
-async(conn, mek, m,{from, prefix, l, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
-try{
-let menuc = `┌───[🍭Zero-Two🍭]
+*╭───────────◉◉►*
+*│𝐇𝐄𝐘, 𝐈'𝐦 𝐒𝐇𝐀𝐆𝐄𝐄-〽️𝐃 , 𝐂𝐑𝐄𝐀𝐓𝐄𝐃 𝐁𝐘*
+*│𝐃𝐈𝐍𝐄𝐓𝐇 𝐖𝐈𝐒𝐇𝐌𝐈𝐓𝐇𝐀✨🍂*
+*│*
+*│I'm always here for help you.😇 Love │you forever ♥️*
+*╰───────────◉◉►*
 
-   *SEARCH COMMANDS MENU*\n\n`
-for (let i=0;i<commands.length;i++) { 
-if(commands[i].category === 'search'){
-  if(!commands[i].dontAddCommandList){
-menuc += `*👨🏼‍🚀Command :* ${commands[i].pattern}
-*💭Desc :* ${commands[i].desc}
-*🙇🏻‍♂️Use:* ${commands[i].use}\n\n`
-}}};
-let generatebutton = [{
-    buttonId: `${prefix}sc`,
-    buttonText: {
-        displayText: 'GET BOT\'S SCRIPT'
-    },
-    type: 1
-  },{
-    buttonId: `${prefix}ping`,
-    buttonText: {
-        displayText: 'GET BOT\'S PING'
-    },
-    type: 1
-  }]
-  let buttonMessaged = {
-    image: { url: config.LOGO },
-    caption: menuc,
-    footer: config.FOOTER,
-    headerType: 4,
-    buttons: generatebutton
-  };
-  return await conn.buttonMessage(from, buttonMessaged, mek);
-} catch (e) {
-  reply('*ERROR !!*')
-  l(e)
-}
-})
+╭──────────────────━┈⊷
+│◦ ✗🤖ʙᴏᴛ ɴᴀᴍᴇ : 𝐒𝐇𝐀𝐆𝐄𝐄-〽️𝐃™
+│◦ ✗👤ᴏᴡɴᴇʀ ɴᴀᴍᴇ : 𝐒𝐇𝐀𝐆𝐄𝐄
+│◦ ✗☎️ᴏᴡɴᴇʀ ɴᴜᴍʙᴇʀ : 
+│◦ ✗ 94710136994
+│◦ ✗⏰ᴜᴘᴛɪᴍᴇ : 12h 8minutes, 
+│◦ ✗💾ʀᴀᴍ : 73.60MB / 64298MB
+│◦ ✗💫ᴘʀᴇғɪx : .
+╰──────────────────━┈⊷
 
-cmd({
-    pattern: "convertmenu",
-    react: "🔄",
-    dontAddCommandList: true,
-    filename: __filename
-},
-async(conn, mek, m,{from, prefix, l, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
-try{
-let menuc = `┌───[🍭Zero-Two🍭]
 
-   *CONVERT COMMANDS MENU*\n\n`
-for (let i=0;i<commands.length;i++) { 
-if(commands[i].category === 'convert'){
-  if(!commands[i].dontAddCommandList){
-menuc += `*👨🏼‍🚀Command :* ${commands[i].pattern}
-*💭Desc :* ${commands[i].desc}
-*🙇🏻‍♂️Use:* ${commands[i].use}\n\n`
-}}};
-let generatebutton = [{
-    buttonId: `${prefix}sc`,
-    buttonText: {
-        displayText: 'GET BOT\'S SCRIPT'
-    },
-    type: 1
-  },{
-    buttonId: `${prefix}ping`,
-    buttonText: {
-        displayText: 'GET BOT\'S PING'
-    },
-    type: 1
-  }]
-  let buttonMessaged = {
-    image: { url: config.LOGO },
-    caption: menuc,
-    footer: config.FOOTER,
-    headerType: 4,
-    buttons: generatebutton
-  };
-  return await conn.buttonMessage(from, buttonMessaged, mek);
-} catch (e) {
-  reply('*ERROR !!*')
-  l(e)
-}
-})
+*╭───────────◎◎►*
+│💻𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗 𝗖𝗢𝗠𝗠𝗔𝗡𝗗𝗦💻
+*│ ─────────*
+*│►.song*
+*│►.video*
+*│►.fb*
+*│►.tt*
+*│►.mediafire*
+*│►.twitter*
+*│►.gdrive*
+*│►.apk*
+*│►.news*
+*│►.img*
+*│►.xnxx*
+│ ─────────
+│🔍𝗦𝗘𝗔𝗥𝗖𝗛 𝗖𝗢𝗠𝗠𝗔𝗡𝗗𝗦🔎
+*│─────────*
+*│►.yts*
+│─────────
+│👾𝗔𝗜 𝗖𝗢𝗠𝗠𝗔𝗡𝗗𝗦👾
+*│─────────*
+*│►.ai*
+│─────────
+│📍𝗢𝗪𝗡𝗘𝗥 𝗖𝗢𝗠𝗠𝗔𝗡𝗗𝗦📍
+*│─────────*
+*│►.restart*
+│─────────
+│⛥𝗚𝗥𝗢𝗨𝗣 𝗖𝗢𝗠𝗠𝗔𝗡𝗗𝗦⛥
+*│─────────*
+*│►.promote*
+*│►.demote*
+*│►.remove*
+*│►.setpic*
+*│►.del*
+*│►.add*
+*│►.setwelcome*
+*│►.setgoodbye*
+│ ─────────
+│💫𝗠𝗔𝗜𝗡 𝗖𝗢𝗠𝗠𝗔𝗡𝗗𝗦💫
+*│─────────*
+*│►.menu*
+*│►.alive*
+*│►.ping*
+*│►.repo*
+*│►.owner*
+*╰───────────◎◎►*
+_𝐒𝐇𝐀𝐆𝐄𝐄 𝐌𝐃 𝐂𝐑𝐄𝐀𝐓𝐄𝐃 𝐁𝐘 𝐃𝐈𝐍𝐄𝐓𝐇 𝐖𝐈𝐒𝐇𝐌𝐈𝐓𝐇𝐀_`
+await conn.sendMessage(from,{image:{url: `https://telegra.ph/file/ec57b757c3c5890d510c3.jpg`},caption:dec},{quoted:mek});
 
-cmd({
-    pattern: "othermenu",
-    react: "👾",
-    dontAddCommandList: true,
-    filename: __filename
-},
-async(conn, mek, m,{from, prefix, l, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
-try{
-let menuc = `┌───[🍭Zero-Two🍭]
-
-   *OTHER COMMANDS MENU*\n\n`
-for (let i=0;i<commands.length;i++) { 
-if(commands[i].category === 'misc'){
-if(!commands[i].dontAddCommandList){
-menuc += `*👨🏼‍🚀Command :* ${commands[i].pattern}
-*💭Desc :* ${commands[i].desc}
-*🙇🏻‍♂️Use:* ${commands[i].use}\n\n`
-}}};
-let generatebutton = [{
-    buttonId: `${prefix}sc`,
-    buttonText: {
-        displayText: 'GET BOT\'S SCRIPT'
-    },
-    type: 1
-  },{
-    buttonId: `${prefix}ping`,
-    buttonText: {
-        displayText: 'GET BOT\'S PING'
-    },
-    type: 1
-  }]
-  let buttonMessaged = {
-    image: { url: config.LOGO },
-    caption: menuc,
-    footer: config.FOOTER,
-    headerType: 4,
-    buttons: generatebutton
-  };
-  return await conn.buttonMessage(from, buttonMessaged, mek);
-} catch (e) {
-  reply('*ERROR !!*')
-  l(e)
-}
-})
-
-cmd({
-  pattern: "ownermenu",
-  react: "💼",
-  dontAddCommandList: true,
-  filename: __filename
-},
-async(conn, mek, m,{from, prefix, l, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
-try{
-let menuc = `┌───[🍭Zero-Two🍭]
-
-   *OWNER COMMANDS MENU*\n\n`
-for (let i=0;i<commands.length;i++) { 
-if(commands[i].category === 'owner'){
-if(!commands[i].dontAddCommandList){
-menuc += `*👨🏼‍🚀Command :* ${commands[i].pattern}
-*💭Desc :* ${commands[i].desc}
-*🙇🏻‍♂️Use:* ${commands[i].use}\n\n`
-}}};
-let generatebutton = [{
-    buttonId: `${prefix}sc`,
-    buttonText: {
-        displayText: 'GET BOT\'S SCRIPT'
-    },
-    type: 1
-  },{
-    buttonId: `${prefix}ping`,
-    buttonText: {
-        displayText: 'GET BOT\'S PING'
-    },
-    type: 1
-  }]
-let buttonMessaged = {
-  image: { url: config.LOGO },
-  caption: menuc,
-  footer: config.FOOTER,
-  headerType: 4,
-  buttons: generatebutton
-};
-return await conn.buttonMessage(from, buttonMessaged, mek);
-} catch (e) {
-reply('*ERROR !!*')
-l(e)
-}
-})
-
-cmd({
-  pattern: "adminmenu",
-  react: "🛡️",
-  dontAddCommandList: true,
-  filename: __filename
-},
-async(conn, mek, m,{from, prefix, l, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
-try{
-let menuc = `*● ══════════════ ●*
-
-   *ADMIN COMMANDS MENU*\n\n`
-for (let i=0;i<commands.length;i++) { 
-if(commands[i].category === 'admin'){
-if(!commands[i].dontAddCommandList){
-menuc += `*👨🏼‍🚀Command :* ${commands[i].pattern}
-*💭Desc :* ${commands[i].desc}
-*🙇🏻‍♂️Use:* ${commands[i].use}\n\n`
-}}};
-let generatebutton = [{
-    buttonId: `${prefix}sc`,
-    buttonText: {
-        displayText: 'GET BOT\'S SCRIPT'
-    },
-    type: 1
-  },{
-    buttonId: `${prefix}ping`,
-    buttonText: {
-        displayText: 'GET BOT\'S PING'
-    },
-    type: 1
-  }]
-let buttonMessaged = {
-  image: { url: config.LOGO },
-  caption: menuc,
-  footer: config.FOOTER,
-  headerType: 4,
-  buttons: generatebutton
-};
-return await conn.buttonMessage(from, buttonMessaged, mek);
-} catch (e) {
-reply('*ERROR !!*')
-l(e)
-}
-})
-
-cmd({
-  pattern: "logomenu",
-  react: "🎡",
-  dontAddCommandList: true,
-  filename: __filename
-},
-async(conn, mek, m,{from, prefix, l, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
-try{
-let menuc = `*● ══════════════ ●*
-
-   *LOGO COMMANDS MENU*\n\n`
-for (let i=0;i<commands.length;i++) { 
-if(commands[i].category === 'logo'){
-if(!commands[i].dontAddCommandList){
-menuc += `*👨🏼‍🚀Command :* ${commands[i].pattern}
-*💭Desc :* ${commands[i].desc}
-*🙇🏻‍♂️Use:* ${commands[i].use}\n\n`
-}}};
-let generatebutton = [{
-    buttonId: `${prefix}sc`,
-    buttonText: {
-        displayText: 'GET BOT\'S SCRIPT'
-    },
-    type: 1
-  },{
-    buttonId: `${prefix}ping`,
-    buttonText: {
-        displayText: 'GET BOT\'S PING'
-    },
-    type: 1
-  }]
-let buttonMessaged = {
-  image: { url: config.LOGO },
-  caption: menuc,
-  footer: config.FOOTER,
-  headerType: 4,
-  buttons: generatebutton
-};
-return await conn.buttonMessage(from, buttonMessaged, mek);
-} catch (e) {
-reply('*ERROR !!*')
-l(e)
+}catch(e){
+console.log(e)
+reply(`${e}`)
 }
 })
