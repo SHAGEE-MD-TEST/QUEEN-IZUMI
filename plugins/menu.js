@@ -32,16 +32,10 @@ let dec = `*👋 Hello ${pushname}*
 *│I'm always here for help you.😇 Love │you forever ♥️*
 *╰───────────◉◉►*
 
-╭──────────────────━┈⊷
-│◦ ✗🤖ʙᴏᴛ ɴᴀᴍᴇ : 𝐒𝐇𝐀𝐆𝐄𝐄-〽️𝐃™
-│◦ ✗👤ᴏᴡɴᴇʀ ɴᴀᴍᴇ : 𝐒𝐇𝐀𝐆𝐄𝐄
-│◦ ✗☎️ᴏᴡɴᴇʀ ɴᴜᴍʙᴇʀ : 
-│◦ ✗ 94710136994
-│◦ ✗⏰ᴜᴘᴛɪᴍᴇ : 12h 8minutes, 
-│◦ ✗💾ʀᴀᴍ : 73.60MB / 64298MB
-│◦ ✗💫ᴘʀᴇғɪx : .
-╰──────────────────━┈⊷
-
+> *Version:* ${require("../package.json").version}
+> *Memory:* ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB
+> *Runtime:* ${runtime(process.uptime())}
+> *Platform:* ${hostname}`
 
 *╭───────────◎◎►*
 │💻𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗 𝗖𝗢𝗠𝗠𝗔𝗡𝗗𝗦💻
