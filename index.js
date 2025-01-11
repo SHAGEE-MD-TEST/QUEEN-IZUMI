@@ -20,14 +20,14 @@ const { File } = require('megajs')
 const path = require('path')
 const msgRetryCounterCache = new NodeCache()
 const prefix = '.'
-const ownerNumber = ['94762898541']
+const ownerNumber = ['94710136994']
 const l = console.log
 var { updateCMDStore,isbtnID,getCMDStore,getCmdForCmdId,connectdb,input,get,updb,updfb } = require("./lib/database")
 
 //===================SESSION============================
 if (!fs.existsSync(__dirname + '/auth_info_baileys/creds.json')) {
   if (config.SESSION_ID) {
-  const sessdata = config.SESSION_ID.replace("IZUMI=","")
+  const sessdata = config.SESSION_ID.replace("SHAGEE=","")
   const filer = File.fromURL(`https://mega.nz/file/${sessdata}`)
   filer.download((err, data) => {
     if (err) throw err
@@ -72,7 +72,7 @@ fs.readdirSync("./plugins/").forEach((plugin) => {
 console.log('Plugins installed ✅')
 await connectdb()
 await updb()
-console.log('Zero-Two-MD connected ✅')
+console.log('SHAGEE-MD connected ✅')
     }
   })
 
@@ -137,11 +137,11 @@ contextInfo: {
       serverMessageId: 127
     },
 externalAdReply: { 
-title: '𝗭𝗲𝗿𝗼-𝗧𝗪𝗢 𝗠𝗗 🍭',
+title: '👾 C R E A T E D   B Y   S H A G E E👾',
 body: 'ᴀ ꜱɪᴍᴘʟᴇ ᴡʜᴀᴛꜱᴀᴘᴘ ʙᴏᴛ',
 mediaType: 1,
-sourceUrl: "https://zerotwomd.me/" ,
-thumbnailUrl: 'https://raw.githubusercontent.com/vihangayt0/ZeroTwo-Uploads/main/bbb61bc283cc1891a9a3c.jpg' ,
+sourceUrl: "https://zeroomd.me/" ,
+thumbnailUrl: 'https://telegra.ph/file/ec57b757c3c5890d510c3.jpg' ,
 renderLargerThumbnail: false,
 showAdAttribution: true
 }
@@ -174,11 +174,11 @@ const textmsg = await conn.sendMessage(from, { text: buttonMessage ,
       serverMessageId: 127
     },
 externalAdReply: { 
-title: '𝗭𝗲𝗿𝗼-𝗧𝗪𝗢 𝗠𝗗 🍭',
+title: '👾 C R E A T E D   B Y   S H A G E E👾',
 body: 'ᴀ ꜱɪᴍᴘʟᴇ ᴡʜᴀᴛꜱᴀᴘᴘ ʙᴏᴛ',
 mediaType: 1,
 sourceUrl: "https://zerotwomd.me/" ,
-thumbnailUrl: 'https://raw.githubusercontent.com/vihangayt0/ZeroTwo-Uploads/main/bbb61bc283cc1891a9a3c.jpg' ,
+thumbnailUrl: 'https://telegra.ph/file/ec57b757c3c5890d510c3.jpg' ,
 renderLargerThumbnail: false,
 showAdAttribution: true
 }
@@ -197,11 +197,11 @@ contextInfo: {
       serverMessageId: 127
     },
 externalAdReply: { 
-title: '𝗭𝗲𝗿𝗼-𝗧𝗪𝗢 𝗠𝗗 🍭',
+title: '👾 C R E A T E D   B Y   S H A G E E👾',
 body: 'ᴀ ꜱɪᴍᴘʟᴇ ᴡʜᴀᴛꜱᴀᴘᴘ ʙᴏᴛ',
 mediaType: 1,
 sourceUrl: "https://zerotwomd.me/" ,
-thumbnailUrl: 'https://raw.githubusercontent.com/vihangayt0/ZeroTwo-Uploads/main/bbb61bc283cc1891a9a3c.jpg' ,
+thumbnailUrl: 'https://telegra.ph/file/ec57b757c3c5890d510c3.jpg' ,
 renderLargerThumbnail: false,
 showAdAttribution: true
 }
@@ -236,11 +236,11 @@ const textmsg = await conn.sendMessage(from, { text: buttonMessage ,contextInfo:
       serverMessageId: 127
     },
 externalAdReply: { 
-title: '𝗭𝗲𝗿𝗼-𝗧𝗪𝗢 𝗠𝗗 🍭',
+title: '👾 C R E A T E D   B Y   S H A G E E👾',
 body: 'ᴀ ꜱɪᴍᴘʟᴇ ᴡʜᴀᴛꜱᴀᴘᴘ ʙᴏᴛ',
 mediaType: 1,
 sourceUrl: "https://zerotwomd.me/" ,
-thumbnailUrl: 'https://raw.githubusercontent.com/vihangayt0/ZeroTwo-Uploads/main/bbb61bc283cc1891a9a3c.jpg' ,
+thumbnailUrl: 'https://telegra.ph/file/ec57b757c3c5890d510c3.jpg' ,
 renderLargerThumbnail: false,
 showAdAttribution: true
 }
@@ -258,11 +258,11 @@ const imgmsg = await conn.sendMessage(jid, { image: msgData.image, caption: butt
       serverMessageId: 127
     },
 externalAdReply: { 
-title: '𝗭𝗲𝗿𝗼-𝗧𝗪𝗢 𝗠𝗗 🍭',
+title: '👾 C R E A T E D   B Y   S H A G E E👾',
 body: 'ᴀ ꜱɪᴍᴘʟᴇ ᴡʜᴀᴛꜱᴀᴘᴘ ʙᴏᴛ',
 mediaType: 1,
 sourceUrl: "https://zerotwomd.me/" ,
-thumbnailUrl: 'https://raw.githubusercontent.com/vihangayt0/ZeroTwo-Uploads/main/bbb61bc283cc1891a9a3c.jpg' ,
+thumbnailUrl: 'https://telegra.ph/file/ec57b757c3c5890d510c3.jpg' ,
 renderLargerThumbnail: false,
 showAdAttribution: true
 }
@@ -307,11 +307,11 @@ contextInfo: {
       serverMessageId: 127
     },
 externalAdReply: { 
-title: '𝗭𝗲𝗿𝗼-𝗧𝗪𝗢 𝗠𝗗 🍭',
+title: '👾 C R E A T E D   B Y   S H A G E E👾',
 body: 'ᴀ ꜱɪᴍᴘʟᴇ ᴡʜᴀᴛꜱᴀᴘᴘ ʙᴏᴛ',
 mediaType: 1,
 sourceUrl: "https://zerotwomd.me/" ,
-thumbnailUrl: 'https://raw.githubusercontent.com/vihangayt0/ZeroTwo-Uploads/main/bbb61bc283cc1891a9a3c.jpg' ,
+thumbnailUrl: 'https://telegra.ph/file/ec57b757c3c5890d510c3.jpg ,
 renderLargerThumbnail: false,
 showAdAttribution: true
 }
@@ -354,11 +354,11 @@ contextInfo: {
       serverMessageId: 127
     },
 externalAdReply: { 
-title: '𝗭𝗲𝗿𝗼-𝗧𝗪𝗢 𝗠𝗗 🍭',
+title: '👾 C R E A T E D   B Y   S H A G E E👾🍭',
 body: 'ᴀ ꜱɪᴍᴘʟᴇ ᴡʜᴀᴛꜱᴀᴘᴘ ʙᴏᴛ',
 mediaType: 1,
 sourceUrl: "https://zerotwomd.me/" ,
-thumbnailUrl: 'https://raw.githubusercontent.com/vihangayt0/ZeroTwo-Uploads/main/bbb61bc283cc1891a9a3c.jpg' ,
+thumbnailUrl: 'https://telegra.ph/file/ec57b757c3c5890d510c3.jpg' ,
 renderLargerThumbnail: false,
 showAdAttribution: true
 }
@@ -414,7 +414,7 @@ if (isCmd) {
     try {
 cmd.function(conn, mek, m, { from, prefix, l, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply });
     } catch (e) {
-console.error("[PLUGIN ERROR] ", e);
+console.error("[PLUGIN ERROR........] ", e);
     }
   }
 }
@@ -467,11 +467,11 @@ if (!body.includes('http')) {
   }
 }
 //====================================================================
-/*const url = 'https://gist.github.com/prabathLK/f602911954a959c8730aeb00a588d15d/raw'
+const url = 'https://gist.github.com/prabathLK/f602911954a959c8730aeb00a588d15d/raw'
 let { data } = await axios.get(url)
 for (vr in data){
 if((new RegExp(`\\b${vr}\\b`,'gi')).test(body)) conn.sendMessage(from,{audio: { url : data[vr]},mimetype: 'audio/mpeg',ptt:true},{quoted:mek})   
-}*/
+}
 var check_id = ((id) => {
   var data = {
     is_bot: false,
@@ -588,7 +588,7 @@ console.log(isError)
   })
 }
 app.get("/", (req, res) => {
-  res.send("📟 Astro Working successfully!");
+  res.send("📟 SHAGEE Working successfully!");
 });
 app.listen(port, () => console.log(`Astro Server listening on port http://localhost:${port}`));
 setTimeout(async() => {
